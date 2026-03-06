@@ -1,0 +1,76 @@
+/* =========================================================
+   styles.css
+   Hoja de estilos propia del proyecto.
+   Se utiliza para personalizar Bootstrap sin reemplazarlo.
+   Buenas prácticas aplicadas:
+   - variables CSS para colores reutilizables
+   - nombres claros
+   - bloques ordenados de lo general a lo específico
+   - foco visible para accesibilidad mínima
+   ========================================================= */
+
+:root {
+  --color-fondo: #f8f9fa;
+  --color-superficie: #ffffff;
+  --color-primario: #0d6efd;
+  --color-texto: #212529;
+  --color-borde: #dee2e6;
+}
+
+/* Reset mínimo de presentación */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* Asegura una altura visual agradable para la tarjeta del hero */
+.hero-card {
+  border: 1px solid var(--color-borde);
+}
+
+/* Mejora visual para las cards del catálogo */
+.product-card {
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor de imagen con tamaño consistente */
+.product-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* Imagen de detalle */
+.detail-image {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Accesibilidad: foco visible para teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* Marca visual de página activa en navbar */
+.nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+/* Ajustes para pantallas pequeñas, coherentes con enfoque mobile-first */
+@media (max-width: 420px) {
+  .display-5 {
+    font-size: 2rem;
+  }
+}

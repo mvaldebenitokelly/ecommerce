@@ -1,0 +1,4 @@
+# En proyectos Front End simples, normalmente se ignoran archivos de sistema o editor.
+.DS_Store
+Thumbs.db
+.vscode/
